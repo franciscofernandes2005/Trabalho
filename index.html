@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumo Energético</title>
+</head>
+<body>
+    <div>
+        <h1>Consulta de Consumo Energético</h1>
+        
+        <!-- Formulário de busca -->
+        <div>
+            <div>
+                <form id="searchForm">
+                    <div>
+                        <label for="clienteId">ID do Cliente</label>
+                        <input type="text" id="clienteId" required>
+                    </div>
+                    <button type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Resultados -->
+        <div>
+            <div>
+                <h2><strong>Informações do Cliente</strong></h2>
+                <div id="clienteInfo">
+                    <p>ID: <span id="clienteIdResult"></span></p>
+                    <p>Nome: <span id="nomeResult"></span></p>
+                    
+                    <h3><strong>Endereço</strong></h3>
+                    <p>Rua: <span id="ruaResult"></span></p>
+                    <p>Número: <span id="numeroResult"></span></p>
+                    <p>Cidade: <span id="cidadeResult"></span></p>
+                    <p>Código Postal: <span id="codigoPostalResult"></span></p>
+                    
+                    <h3><strong>Informações Adicionais</strong></h3>
+                    <p>Tipo de Tarifa: <span id="tipoTarifaResult"></span></p>
+                    <p>Fornecedor: <span id="fornecedorResult"></span></p>
+                    <p>Contrato Ativo: <span id="contratoAtivoResult"></span></p>
+                    
+                    <h3><strong>Consumo</strong></h3>
+                    <div id="consumoResult"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="index.js"></script>
+</body>
+</html> 

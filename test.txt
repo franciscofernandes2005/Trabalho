@@ -1,0 +1,19 @@
+Login com credenciais válidas
+curl -X POST http://localhost:3000/api/login \
+-H "Content-Type: application/json" \
+-d '{"username": "admin", "password": "admin123"}'
+
+Login com credenciais inválidas
+curl -X POST http://localhost:3000/api/login \
+-H "Content-Type: application/json" \
+-d '{"username": "admin", "password": "senhaerrada"}'
+
+Acessar perfil do usuário 
+curl -H "Authorization: Bearer YOUR_TOKEN" http://localhost:3000/api/profile
+
+Acessar dados de consumo 
+curl -H "Authorization: Bearer YOUR_TOKEN" http://localhost:3000/api/consumo/12345
+
+# 5. Tentar acessar rota protegida sem token
+curl http://localhost:3000/api/profile
+
