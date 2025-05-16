@@ -3,51 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consumo Energético</title>
+    <title>Sistema de Autenticação</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div>
-        <h1>Consulta de Consumo Energético</h1>
+    <div class="container">
+        <h1>Login</h1>
         
-        <!-- Formulário de busca -->
-        <div>
-            <div>
-                <form id="searchForm">
-                    <div>
-                        <label for="clienteId">ID do Cliente</label>
-                        <input type="text" id="clienteId" required>
-                    </div>
-                    <button type="submit">Buscar</button>
-                </form>
-            </div>
+        <!-- Secção de Início de Sessão -->
+        <div id="loginSection">
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">Utilizador:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Palavra-passe:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Iniciar Sessão</button>
+                <div id="loginError" class="error"></div>
+            </form>
         </div>
 
-        <!-- Resultados -->
-        <div>
-            <div>
-                <h2><strong>Informações do Cliente</strong></h2>
-                <div id="clienteInfo">
-                    <p>ID: <span id="clienteIdResult"></span></p>
-                    <p>Nome: <span id="nomeResult"></span></p>
-                    
-                    <h3><strong>Endereço</strong></h3>
-                    <p>Rua: <span id="ruaResult"></span></p>
-                    <p>Número: <span id="numeroResult"></span></p>
-                    <p>Cidade: <span id="cidadeResult"></span></p>
-                    <p>Código Postal: <span id="codigoPostalResult"></span></p>
-                    
-                    <h3><strong>Informações Adicionais</strong></h3>
-                    <p>Tipo de Tarifa: <span id="tipoTarifaResult"></span></p>
-                    <p>Fornecedor: <span id="fornecedorResult"></span></p>
-                    <p>Contrato Ativo: <span id="contratoAtivoResult"></span></p>
-                    
-                    <h3><strong>Consumo</strong></h3>
-                    <div id="consumoResult"></div>
-                </div>
-            </div>
+        <!-- Conteúdo Principal (será mostrado após início de sessão) -->
+        <div id="mainContent" class="hidden">
+            <!-- O conteúdo será inserido via JavaScript -->
         </div>
     </div>
 
-    <script type="module" src="index.js"></script>
+    <script src="index.js"></script>
 </body>
 </html> 

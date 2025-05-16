@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Sucesso</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container success-container">
+        <div class="success-card">
+            <div class="success-header">
+                <i class="fas fa-check-circle success-icon"></i>
+                <h1>Login Realizado com Sucesso!</h1>
+            </div>
+            
+            <div class="user-info">
+                <div class="user-avatar">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="user-details">
+                    <h2>Bem-vindo, {{name}}!</h2>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <i class="fas fa-user"></i>
+                            <span>Username: {{username}}</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>Email: {{email}}</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-user-tag"></i>
+                            <span>Função: {{role}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button class="btn btn-primary" onclick="logout()">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Terminar Sessão
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function logout() {
+            // Remover o token e informações do usuário do sessionStorage
+            sessionStorage.removeItem('token');
+            sessionStorage.removeItem('user');
+            // Redirecionar para a página inicial
+            window.location.href = '/';
+        }
+    </script>
+</body>
+</html> 
